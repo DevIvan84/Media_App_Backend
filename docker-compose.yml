@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  postgresdb:
+    image: postgres # Puedes cambiar esto a la versión que prefieras.
+    environment:
+      POSTGRES_DB: mediapp_2024_2
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
