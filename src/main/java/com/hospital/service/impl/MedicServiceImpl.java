@@ -1,10 +1,10 @@
 package com.hospital.service.impl;
 
 import com.hospital.exception.ModelNotFoundException;
-import com.hospital.model.Patient;
+import com.hospital.model.Medic;
 import com.hospital.repo.IGenericRepo;
-import com.hospital.repo.IPatientRepo;
-import com.hospital.service.IPatientService;
+import com.hospital.repo.IMedicRepo;
+import com.hospital.service.IMedicService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,13 +12,13 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class PatientServiceImpl extends CRUDImpl<Patient, Integer> implements IPatientService {
+public class MedicServiceImpl extends CRUDImpl<Medic, Integer> implements IMedicService {
 
-    private final IPatientRepo repo;
+    private final IMedicRepo repo;
 
 
     @Override
-    protected IGenericRepo<Patient, Integer> getRepo() {
+    protected IGenericRepo<Medic, Integer> getRepo() {
         return repo;
     }
 }
