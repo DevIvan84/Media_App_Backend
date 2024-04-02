@@ -1,6 +1,5 @@
 package com.hospital.service.impl;
 
-import com.hospital.exception.ModelNotFoundException;
 import com.hospital.model.Patient;
 import com.hospital.repo.IGenericRepo;
 import com.hospital.repo.IPatientRepo;
