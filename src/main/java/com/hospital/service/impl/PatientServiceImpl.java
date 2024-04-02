@@ -7,8 +7,6 @@ import com.hospital.service.IPatientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 @RequiredArgsConstructor
 public class PatientServiceImpl extends CRUDImpl<Patient, Integer> implements IPatientService {
