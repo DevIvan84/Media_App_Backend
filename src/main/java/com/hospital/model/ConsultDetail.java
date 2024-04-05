@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class ConsultDetail {
 
     @Id
-    @EqualsAndHashCode.Include
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idDetail;
 
     @ManyToOne

@@ -1,5 +1,9 @@
 package com.hospital.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,20 +15,24 @@ public class PatientDTO {
 
     private Integer idPatient;
 
+    @NotNull
+    @Size(min = 3, max = 70, message = "{firstname.size}")
     private String firstName;
 
-
+    @NotNull
+    @Size(min = 3, max = 70, message = "{lastname.size}")
     private String lastName;
 
-
+    @NotNull
     private String dni;
 
-
+    @NotNull
     private String address;
 
-
+    @NotNull
+    @Pattern(regexp = "[0-9]+")
     private String phone;
 
-
+    @Email
     private String email;
 }
